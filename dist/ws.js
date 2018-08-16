@@ -996,10 +996,12 @@ Request.prototype.connect = function () {
   });
   // 监听二进制消息
   eventSource.addEventListener("binary", function (ev) {
-    self._ws._transport.receiveData(
-      self._ws._resolveBase64 ? self._ws._resolveBase64(ev.data) : decodeBase64(ev.data),
-      true
-    )
+    if (self._connected) {
+      self._ws._transport.receiveData(
+        self._ws._resolveBase64 ? self._ws._resolveBase64(ev.data) : decodeBase64(ev.data),
+        true
+      )
+    }
   });
   // 服务端主动关闭
   eventSource.addEventListener("offline", function (ev) {
