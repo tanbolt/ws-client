@@ -1,0 +1,25 @@
+{
+  "name": "ws-client",
+  "version": "0.0.1",
+  "description": "Tanbolt websocket client",
+  "keywords": [
+    "websocket"
+  ],
+  "main": "./dist/ws.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanbolt/ws-client.git"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "uglify-js": ">= 0.0.0"
+  },
+  "homepage": "https://github.com/tanbolt/ws-client",
+  "author": "Malacca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tanbolt/tanbolt/issues"
+  }
+}
